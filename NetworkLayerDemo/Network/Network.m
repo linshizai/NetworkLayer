@@ -91,9 +91,9 @@ static dispatch_semaphore_t _lock; //信号灯保证线程安全
 
     //请求参数
     NSMutableDictionary *parameters = @{}.mutableCopy;
-    parameters[@"publickey"] = @"RSA公钥";
-    parameters[@"interference"] = @"本地的DES干扰码，自己随机生成";
-    parameters[@"sign"] = @"本地的3DES密钥 -> RSA公钥加密";
+    parameters[@"publickey"] = @"自己生成RSA公钥";
+    parameters[@"interference"] = @"自己生成DES干扰码 -> 用RSA公钥加密";
+    parameters[@"sign"] = @"本地的3DES密钥 -> 用RSA公钥加密";
     parameters[@"data"] = @"将data字典 -> NSData -> 3DES -> Base64";
 
     [self postJSONWithAct:ApiActSessionId parameters:parameters success:^(id json) {

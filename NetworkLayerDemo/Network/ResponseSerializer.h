@@ -8,6 +8,9 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+/**
+ * 自定义响应数据的解析，继承自AFJSONResponseSerializer
+ */
 @interface ResponseSerializer : AFJSONResponseSerializer
 
 @end

@@ -9,6 +9,10 @@
 #import <AFNetworking/AFNetworking.h>
 #import "NetworkDefine.h"
 
+/**
+ * 自定义请求数据的解析，继承自AFHTTPRequestSerializer
+ */
+
 @interface RequestSerializer : AFHTTPRequestSerializer
 
 @property (nonatomic, assign) ApiAct act;
