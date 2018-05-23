@@ -18,8 +18,8 @@
 ## Class文件说明
 - Network：网络请求总入口（Session会话的管理、网络请求的管理、失败重试机制及简单的请求保护措施）
 - SessionTask：单次请求任务封装
-- RequestSerializer：  自定义请求数据的解析，继承自AFHTTPRequestSerializer
-- ResponseSerializer：自定义响应数据的解析，继承自AFJSONResponseSerializer
+- RequestSerializer： 自定义请求数据的解析，实现了AFHTTPRequestSerializer协议
+- ResponseSerializer：自定义响应数据的解析，实现了自AFJSONResponseSerializer协议
 - ServerConfiguration：服务端地址的管理和切换
 - NetworkDefine：接口编号的枚举、加密方式的枚举等
 
